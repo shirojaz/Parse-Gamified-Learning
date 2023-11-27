@@ -10,5 +10,6 @@
   `pip install django`
   4. Check to make sure you have installed django:
   `django-admin --version`
-  5. run the Parse App:
+  5. Drag the "Parse_app" folder into the Virtual Environment's directory
+  6. run the Parse App:
   `py Parse_app/manage.py runserver`
