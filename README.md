@@ -11,4 +11,4 @@
   4. Check to make sure you have installed django:
   `django-admin --version`
   5. run the Parse App:
-  `py Parse/manage.py runserver`
+  `py Parse_app/manage.py runserver`
