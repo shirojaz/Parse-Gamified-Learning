@@ -18,7 +18,7 @@
 
 ## Note:
  - login credentials for the project:
-   -- Username: shirojaz
-   -- Password: flynn
+   - Username: shirojaz
+   - Password: flynn
 
 (forgot to implement create-account function)
