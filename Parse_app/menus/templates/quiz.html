@@ -41,7 +41,7 @@
 
     <!--HEADER PART START-->
     <header>
-        <div class="header py-1 sticky">
+        <div class="header py-1 sticky" margin>
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light px-0 py-0">
                     <a class="navbar-brand" href="/dashboard">
@@ -79,7 +79,7 @@
     </header>
     <!--HEADER PART END-->
 
-
+    <hr />
     <!-- QUIZ PROPER START -->
     <div class="app center" id="app">
         <div class="container mt-5 pt-5">
@@ -97,75 +97,13 @@
                   <hr>
                   <button @click="nextQuestion" class="btn btn-primary">[[ currentQuestionIndex === questions.length - 1 ? 'Submit' : 'Next' ]]</button>
                 </div>
+                <hr />
                   <p>Your result: [[result]]</p>
             </div>
         </div>
     </div>
 
     <!-- QUIZ PROPER END -->
-
-        <!--FOOTER TOP SECTION START-->
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                        <div class="footer-top-content">
-                            <div class="logo">
-                                <img src="{% static 'images/logo.png' %}" class="w-100 img-fluid" alt="">
-                            </div>
-                            <p>Batangas State University - The National Engineering University, Alangilan Campus</p>
-                        </div>
-                    </div>
-    
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                        <div class="contact-content">
-                            <h3>Contact Us</h3>
-                            <img src="{% static 'images/border.png' %}" alt="">
-                            <div class="contact-info d-flex align-items-center">
-                                <div class="icon"><i class="icofont-phone"></i></div>
-                                <div class="info">
-                                    <a href="#">+123 456 789</a>
-                                    <a href="#">0912 345 6789</a>
-                                </div>
-                            </div>
-                            <div class="contact-info d-flex align-items-center">
-                                <div class="icon"><i class="icofont-email"></i></div>
-                                <div class="info">
-                                    <a href="#">Parse.support@jauntlinktech.com</a>
-                                    <a href="#">Parse@jauntlinktech.com</a>
-                                </div>
-                            </div>
-                            <div class="contact-info d-flex align-items-center">
-                                <div class="icon"><i class="icofont-google-map"></i></div>
-                                <div class="info">
-                                    <a href="#">Batangas State University - The National Engineering University, Alangilan Campus</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--FOOTER TOP SECTION END-->
-    
-        <!--FOOTER BOTTOM START-->
-        <div class="footer-bootom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
-                        <div class="copyright-txt">
-                            <p>Copyright 2023. All Rights Reserved.</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
-                        <div class="terms">
-                            <span><a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Policy</a></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--FOOTER BOTTOM END-->
     
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
  
