@@ -4,7 +4,6 @@ from django.http import HttpResponse, JsonResponse
 from django.template import loader
 from .forms import AccountForm, UserLoginForm
 from django.contrib.auth import authenticate, login, logout
-from django.contrib import messages
 from .models import *
 import random
 # Create your views here.
@@ -43,15 +42,9 @@ def successfulAccount(request):
     return render(request, 'account_success.html')
 
 def about(request):
-    # Logic for the about page
     return render(request, 'about.html')
 
-def blank(request):
-    # Logic for the blank page
-    return render(request, 'blank.html')
-
 def error(request):
-    # Logic for the error page
     return render(request, 'error.html')
 
 def finished(request):
@@ -59,9 +52,7 @@ def finished(request):
     return render(request, 'finished.html')
 
 def help(request):
-    # Logic for the help page
     return render(request, 'help.html')
-from django.http import JsonResponse, HttpResponse
 
 def get_quiz(request):
     try:
@@ -97,9 +88,9 @@ def user_login(request):
     if request.method == 'POST':
         form = UserLoginForm(request, data=request.POST)
         if form.is_valid():
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
-            user = authenticate(username=username, password=password)
+            username_ = form.cleaned_data.get('username')
+            password_ = form.cleaned_data.get('password')
+            user = authenticate(username=username_, password=password_)
             if user is not None:
                 login(request, user)
                 return render(request, 'index.html')
@@ -108,19 +99,15 @@ def user_login(request):
     return render(request, 'login.html', {'form': form})
 
 
-def createAccount(request):
+def signup(request):
     if request.method == 'POST':
         form = AccountForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('successful/')  # Redirect to a success page
-        else:
-            # The form is not valid. Print errors to console or pass them back to the template
-            print(form.errors)  # This line is for debugging purposes
-            return render(request, 'signup.html', {'form': form})
+            return render(request, 'login.html', {'form': form})
     else:
         form = AccountForm()
-        return render(request, 'signup.html', {'form': form})
+    return render(request, 'signup.html', {'form': form})
 
 def question_list(request):
     questions = Question.objects.all()

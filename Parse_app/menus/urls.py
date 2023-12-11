@@ -5,13 +5,12 @@ urlpatterns = [
     path('', views.startpage, name = "Start Page"),
     path('dashboard/', views.index, name = "Home page"),
     path('account/', views.account, name = 'Account Settings'), # changed "views.homepage" to "views.account"
-    path('account/create', views.createAccount, name = 'Account Creation'),
+    path('signup/', views.signup, name = 'Account Creation'),
     path('account/successful/', views.successfulAccount, name = 'Account Successful'),
     path('courses/', views.courses, name = 'Courses'),
 
 #Added
     path('about/', views.about, name = 'About Page'),
-    path('blank/', views.blank, name = 'Blank Page'),
     path('error/', views.error, name = 'Error Page'),
     path('courses/finished', views.finished, name = 'Course Finished'),
     path('help/', views.help, name= 'Help Page'),
@@ -29,6 +28,6 @@ urlpatterns = [
     path('api/get-quiz/', views.get_quiz, name='get_quiz'),
 
 #Fourth Batch
-    path('quizzes/type-B/', views.quiz_typeB, name="Test Quiz Type"),
+    path('test/typeb/', views.quiz_typeB, name="Test Quiz Type"),
     path('logout/', views.user_logout, name="Logout")
 ]

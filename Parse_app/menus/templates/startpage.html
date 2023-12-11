@@ -27,9 +27,6 @@
 
 
 <body>
-    <div>
-        <a class="nav-link" href="/dashboard">Return</a>
-    </div>
 
     <!-- Goto TOP -->
     <div id="top-btn">
@@ -50,7 +47,7 @@
         <div class="header py-1 sticky">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light px-0 py-0">
-                    <a class="navbar-brand" href="/dashboard">
+                    <a class="navbar-brand" href="/">
                         <div class="logo">
                             <img src="{% static 'images/logo.png' %}" class="w-100 img-fluid" alt="">
                         </div>
@@ -58,6 +55,13 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="icofont-navigation-menu"></i>
                     </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav navbar-custom">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/admin">Admin Page</a>
+                            </li> 
+                        </ul>
+                    </div>
                 </nav>
             </div>
         </div>
@@ -147,18 +151,17 @@
     <!--FOOTER BOTTOM END-->
 
     <!-- jQuery File-->
-    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="{% static "javascript/jquery-3.5.1.min.js" %}"></script>
     <!-- Popper JS -->
-    <script src="js/popper.min.js"></script>
+    <script src="{% static "javascript/popper.min.js" %}"></script>
     <!-- Slick JS -->
-    <script src="js/slick.min.js"></script>
+    <script src="{% static "javascript/slick.min.js" %}"></script>
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{% static "javascript/bootstrap.min.js" %}"></script>
     <!-- Venobox JS -->
-    <script src="js/venobox.min.js"></script>
+    <script src="{% static "javascript/venobox.min.js" %}"></script>
     <!-- main.js -->
-    <script src="js/main.js"></script>
+    <script src="{% static "javascript/main.js" %}"></script>
 
     <script>
         $(".testimonial-slider").slick({

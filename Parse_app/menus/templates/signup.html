@@ -1,9 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Design by foolishdeveloper.com -->
-    <title>Signup Page</title>
- 
+<html class="no-js" lang="zxx"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parse | Signup</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'Parse.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'Parse.ico' %}" type="image/x-icon">
+    <!-- Important -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
@@ -142,22 +146,12 @@ button{
     <form action="" method="post">
         {% csrf_token %} 
         <h3>Signup Here</h3>
-
-        <label for="username">Username</label>
-        <input type="text" placeholder="Username" name="username" id="username">
-
-        <label for="email">Email</label>
-        <input type="email" placeholder="Email or Phone" name="email" id="email">
-
-        <label for="password1">Password</label>
-        <input type="password" placeholder="Password" id="password1" name="password1">
-
-
-        <label for="password2">Confrom Password</label>
-        <input type="password" placeholder="Confrom Password" id="password2" name="password2">
-        <button type="submit">Sign-up</button>
+        <form method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit">Sign up</button>
         
-        <a href="/login" >I have already account</a>
+        <a href="/login" >I already have an account</a>
     </form>
 </body>
 </html>
