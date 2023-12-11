@@ -13,8 +13,8 @@
   6. Install django-extensions:
   ```pip install django-extensions``` or ```py -m pip install django-extensions```
   7. Drag the "Parse_app" folder into the Virtual Environment's directory
-  8. run the Parse App:
-  `py Parse_app/manage.py runserver`
+  8. Run the Parse_App web application:
+  `py [any directory]/Parse_app/manage.py runserver`
 
 ## Note:
  - login credentials for the project:
