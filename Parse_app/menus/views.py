@@ -126,3 +126,66 @@ def account(request):
 def user_logout(request):
     logout(request)
     return redirect('/')
+
+def question1(request):
+    return render(request, 'Q1.html')
+
+def question1_ans(request):
+    return render(request, 'Q1-Ans.html')
+
+def question2(request):
+    return render(request, 'Q2.html')
+
+def question2_ans(request):
+    return render(request, 'Q2-Ans.html')
+
+def question3(request):
+    return render(request, 'Q3.html')
+
+def question3_ans(request):
+    return render(request, 'Q3-Ans.html')
+
+def question4(request):
+    return render(request, 'Q4.html')
+
+def question4_ans(request):
+    return render(request, 'Q4-Ans.html')
+
+def question5(request):
+    return render(request, 'Q5.html')
+
+def question5_ans(request):
+    return render(request, 'Q5-Ans.html')
+
+def question6(request):
+    return render(request, 'Q6.html')
+
+def question6_ans(request):
+    return render(request, 'Q6-Ans.html')
+
+def question7(request):
+    return render(request, 'Q7.html')
+
+def question7_ans(request):
+    return render(request, 'Q7-Ans.html')
+
+def question8(request):
+    return render(request, 'Q8.html')
+
+def question8_ans(request):
+    return render(request, 'Q8-Ans.html')
+
+def question9(request):
+    return render(request, 'Q9.html')
+
+def question9_ans(request):
+    return render(request, 'Q9-Ans.html')
+
+def question10(request):
+    return render(request, 'Q10.html')
+
+def question10_ans(request):
+    return render(request, 'Q10-Ans.html')
+
+def congrats(request):
+    return render(request, 'congrats.html')

@@ -84,22 +84,82 @@
           <div class="row align-items-center">
               <div class="home-hero-content">
                   <h1>Choose your <strong>Course</strong>!</h1>
-                  <p></p>
-              <div class="home-hero-content">
-                <div class="col-md-6 mx-auto">
-                    <form>
-                        <div class="form-group">
-                            <select name="category" id="" class="form-control">
-                                <option value="choose">Choose a Course</option>
-                                {%  for category in categories %}
-                                <option value="{{category.category_name}}">{{category.category_name}}</option>
-                                {% endfor %}
-                            </select>
+            <div class="row food-box">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                    <div class="food-menu text-center">
+                        <div class="food-img-info">
+                            <div class="food-img">
+                                <img src="{% static 'images/Python.png' %}" class="w-100" alt="">
+                            </div>
+                            <div class="overlay text-left">
+                                <span> Python is a versatile language that is commonly used for web development, data analysis, artificial intelligence, and machine learning. It is known for its readability, simplicity, and ease of use, making it a popular choice for beginners and experienced coders alike.</span>
+                            </div>
                         </div>
-                        <button class="btn order-btn">Submit</button>
-                  </form>
+                        <div class="food-informaion">
+                            <div class="row align-items-center">
+                                <div class="col-12"><h2>Python Programming</h2></div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                    <div class="food-info text-left">
+                                        <span> Basic Programming</span>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-right">
+                                    <a href="/python/Quiz/1" class="btn order-btn2">Learn Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                    <div class="food-menu text-center">
+                        <div class="food-img-info">
+                            <div class="food-img">
+                                <img src="{% static 'images/Physics.png' %}" class="w-100" alt="">
+                            </div>
+                            <div class="overlay text-left">
+                                <h4>Not Available</h4>
+                            </div>
+                        </div>
+                        <div class="food-informaion">
+                            <div class="row align-items-center">
+                                <div class="col-12"><h2>Physics</h2></div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                    <div class="food-info text-left">
+                                        <span>To be Added</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                    <div class="food-menu text-center">
+                        <div class="food-img-info">
+                            <div class="food-img">
+                                <img src="{% static 'images/Calculus.png' %}" class="w-100" alt="">
+                            </div>
+                            <div class="overlay text-left">
+                                <h4>Not Available</h4>
+                            </div>
+                        </div>
+                        <div class="food-informaion">
+                            <div class="row align-items-center">
+                                <div class="col-12"><h2>Calculus</h2></div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                    <div class="food-info text-left">
+                                        <span>To be Added</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <!--OFFERED COURSES END-->
           </div>
           </div>
       </div>
