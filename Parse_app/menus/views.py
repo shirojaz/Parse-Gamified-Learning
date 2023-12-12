@@ -1,9 +1,8 @@
-import logging
-from django.shortcuts import get_object_or_404, render, redirect
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse
 from django.template import loader
-from .forms import AccountForm, UserLoginForm
-from django.contrib.auth import authenticate, login, logout
+from .forms import AccountForm, UserLoginForm, UserRegistrationForm
+from django.contrib.auth import authenticate, get_user_model, login, logout
 from .models import *
 import random
 # Create your views here.
@@ -85,6 +84,8 @@ def get_quiz(request):
 
 
 def user_login(request):
+    if request.user.is_authenticated:
+        return redirect('/dashboard')
     if request.method == 'POST':
         form = UserLoginForm(request, data=request.POST)
         if form.is_valid():
@@ -98,16 +99,21 @@ def user_login(request):
         form = UserLoginForm()
     return render(request, 'login.html', {'form': form})
 
-
 def signup(request):
+    if request.user.is_authenticated:
+        return redirect('/dashboard')
     if request.method == 'POST':
-        form = AccountForm(request.POST)
+        form = UserRegistrationForm(request.POST)
         if form.is_valid():
-            form.save()
-            return render(request, 'login.html', {'form': form})
+            user = form.save()
+            login(request, user)
+            return redirect('/dashboard')
+        else:
+            for error in list(form.errors.values()):
+                print(request, error)
     else:
-        form = AccountForm()
-    return render(request, 'signup.html', {'form': form})
+        form = UserRegistrationForm()
+    return render(request=request, template_name='signup.html', context={'form':form})
 
 def question_list(request):
     questions = Question.objects.all()
