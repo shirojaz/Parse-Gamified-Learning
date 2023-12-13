@@ -3,7 +3,8 @@
 
 ## How to run the webapp: (make sure you have `pip` installed)
   1. Make a Virtual Environment(venv) in any directory:
-  ```py -venv [name your virtual environment here]``` (in the case that `py` doesn't work, try `python`)
+  ```py -venv [name your virtual environment here]```
+  - (in the case that `py` doesn't work, try `python`)
   3. Activate the Virtual Environment:
   ```[Your Virtual Environment]/Scripts/activate.ps1```
   4. Install django in this Virtual Environment:
