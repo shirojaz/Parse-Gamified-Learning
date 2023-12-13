@@ -18,6 +18,6 @@
   `py [any directory]/Parse_app/manage.py runserver`
 
 ## Note:
- - login credentials for the project:
+ - Superuser credentials for the project:
    - Username: shirojaz
    - Password: 12shiro12
